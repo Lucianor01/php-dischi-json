@@ -1,0 +1,19 @@
+body {
+    background-color: #1d2d3c;
+}
+
+header {
+    background-color: #06131f;
+}
+
+header img {
+    width: 50px;
+    filter: invert(55%) sepia(96%) saturate(389%) hue-rotate(90deg) brightness(99%) contrast(99%);
+}
+
+main .card {
+    width: 350px;
+    height: 420px;
+    padding: 20px 50px;
+    background-color: #112030;
+}
