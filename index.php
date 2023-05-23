@@ -15,20 +15,20 @@
     <div id="app">
 
         <header>
-            <div class="container py-3">
-                <img src="./img/logo-small.svg" alt="logo">
+            <div class="container-fluid py-3">
+                <img class="ms-5" src="./img/logo-small.svg" alt="logo">
             </div>
         </header>
 
         <main>
-            <div class="container mt-4">
-                <div class="row row-gap-4">
+            <div class="container mt-4 overflow-auto">
+                <div class="row row-cols-3 row-gap-4">
                     <div v-for="(dischi, index) in data" :key="index" class="col-4">
-                        <div class="card text-center ">
+                        <div class="card h-100 text-center ">
                             <img :src="dischi.poster" class="card-img-top" :alt="dischi.title">
                             <div class="card-body px-0 pb-0 text-light">
                                 <h5 class="card-title fw-bold">{{ dischi.title }}</h5>
-                                <p class="card-text">{{ dischi.author }}</p>
+                                <p class="card-text mb-2">{{ dischi.author }}</p>
                                 <p class="card-text fw-bold">{{ dischi.year }}</p>
                             </div>
                         </div>
