@@ -13,15 +13,16 @@
 <body>
 
     <div id="app">
-        <div class="contianer">
+        <div class="container">
             <div class="row">
-                <div v-for="(dischi, index) in data" :key="index" class="card" style="width: 18rem;">
-                    <img :src="dischi.poster" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ dischi.title }}</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div v-for="(dischi, index) in data" :key="index" class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img :src="dischi.poster" class="card-img-top" :alt="dischi.title">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ dischi.title }}</h5>
+                            <p class="card-text">{{ dischi.author }}</p>
+                            <p class="card-text">{{ dischi.year }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
