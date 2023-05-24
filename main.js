@@ -3,7 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            apiUrl: 'apis/listaDischi.php',
+            apiUrl: 'server.php',
             data: '',
         }
     },
@@ -14,6 +14,8 @@ createApp({
                     this.data = res.data;
                     // console.log(res.data);
                 })
+        },
+        clickCard() {
         }
     },
     mounted() {
