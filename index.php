@@ -43,6 +43,9 @@
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-button" data-bs-theme="dark">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                     <div class="modal-content">
                         <div class="card h-100 text-center">
                             <img :src="discDetails.poster" class="card-img-top" :alt="discDetails.title">

@@ -29,12 +29,22 @@ main .modal-dialog {
     max-width: none;
     margin-right: 2%;
     margin-left: 2%;
-    background-color: rgba(17, 32, 48, 0.5);
+    background-color: rgba(17, 32, 48, 0.9);
 }
 
 main .modal-content {
     background-color: transparent;
     border: 0;
+}
+
+main .modal-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+main .modal-button button {
+    cursor: pointer;
 }
 
 main .modal-content .card {

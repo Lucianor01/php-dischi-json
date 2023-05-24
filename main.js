@@ -25,7 +25,7 @@ createApp({
                 .then((res) => {
                     this.discDetails = res.data;
                 })
-        }
+        },
     },
     mounted() {
         this.chiamataApi();
