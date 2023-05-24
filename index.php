@@ -24,13 +24,32 @@
         <main>
             <div class="container mt-4 overflow-auto">
                 <div class="row row-cols-3 row-gap-4">
-                    <div v-for="(dischi, index) in data" :key="index" class="col-4">
-                        <div class="card h-100 text-center" @click="clickCard()">
-                            <img :src="dischi.poster" class="card-img-top" :alt="dischi.title">
+                    <div v-for="(disc, index) in data" :key="index" class="col-4">
+                        <a href="" class="d-inline-block text-decoration-none" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            <div class="card h-100 text-center" @click="clickCard(index)">
+                                <img :src="disc.poster" class="card-img-top" :alt="disc.title">
+                                <div class="card-body px-0 pb-0 text-light">
+                                    <h5 class="card-title fw-bold">{{ disc.title }}</h5>
+                                    <p class="card-text mb-2">{{ disc.author }}</p>
+                                    <p class="card-text fw-bold">{{ disc.year }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="card h-100 text-center">
+                            <img :src="discDetails.poster" class="card-img-top" :alt="discDetails.title">
                             <div class="card-body px-0 pb-0 text-light">
-                                <h5 class="card-title fw-bold">{{ dischi.title }}</h5>
-                                <p class="card-text mb-2">{{ dischi.author }}</p>
-                                <p class="card-text fw-bold">{{ dischi.year }}</p>
+                                <h5 class="card-title fw-bold">{{ discDetails.title }}</h5>
+                                <p class="card-text mb-2">{{ discDetails.author }}</p>
+                                <p class="card-text fw-bold">{{ discDetails.year }}</p>
                             </div>
                         </div>
                     </div>

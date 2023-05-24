@@ -5,6 +5,7 @@ createApp({
         return {
             apiUrl: 'server.php',
             data: '',
+            discDetails: ''
         }
     },
     methods: {
@@ -15,7 +16,15 @@ createApp({
                     // console.log(res.data);
                 })
         },
-        clickCard() {
+        clickCard(i) {
+            const datoIndice = {
+                discIndex: i
+            }
+
+            axios.post(this.apiUrl, datoIndice, { headers: { 'Content-Type': 'multipart/form-data' } })
+                .then((res) => {
+                    this.discDetails = res.data;
+                })
         }
     },
     mounted() {

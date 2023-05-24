@@ -24,3 +24,25 @@ main .card h5 {
 main .card p {
     font-size: 13px;
 }
+
+main .modal-dialog {
+    max-width: none;
+    margin-right: 2%;
+    margin-left: 2%;
+    background-color: rgba(17, 32, 48, 0.5);
+}
+
+main .modal-content {
+    background-color: transparent;
+    border: 0;
+}
+
+main .modal-content .card {
+    margin: auto;
+    border: 0;
+    background-color: transparent;
+}
+
+main .modal-content .card img {
+    border-radius: 0;
+}
